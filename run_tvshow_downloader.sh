@@ -9,7 +9,7 @@ if [ -f $MAGNETZ_FILE ]; then
 
     # Adding the different magnet torrent
     for magnet in $(cat $MAGNETZ_FILE); do
-        transmission-remote --auth user:pwd -a "$magnet"
+		open -a Transmission "$magnet"
     done;
 
     rm $MAGNETZ_FILE
